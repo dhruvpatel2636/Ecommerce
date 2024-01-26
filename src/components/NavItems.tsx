@@ -1,6 +1,6 @@
 "use client";
 import { PRODUCT_CATEGORIES } from "@/config";
-import React, { KeyboardEventHandler, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NavItem from "./NavItem";
 import { useOnClickOutside } from "@/hooks/use-on-click-outside";
 
@@ -21,7 +21,7 @@ const NavItems = () => {
     })
   },[])
 
-  const navRef=useRef<HTMLDivElement | null>(null)
+  const navRef=useRef<HTMLDivElement | null>(null) //or use onblue instead of ref 
   useOnClickOutside(navRef,()=>setActiveIndex(null))
   return (
     <div className="flex gap-4 h-full" ref={navRef}>

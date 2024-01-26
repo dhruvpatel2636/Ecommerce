@@ -53,7 +53,7 @@ const NavItem = ({ category, isAnyOpen, isOpen, handleOpen }: NavItemProps) => {
                       className="group relative text-base sm:text-sm"
                     >
                       <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                        <Image src={item.imageSrc} alt='product category image'
+                        <Image src={item.imageSrc} alt='product category image' 
                         fill className='object-cover object-center'/>
                       </div>
                       <Link href={item.href} className="mt-6 block font-medium text-gray-900">
