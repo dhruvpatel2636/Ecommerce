@@ -17,7 +17,7 @@ import Image from "next/image";
 
 const Cart = () => {
   const fee = 1;
-  const itemCount = 1;
+  const itemCount = 0;
   return (
     <Sheet>
       <SheetTrigger className="group -m-2 flex items-center p-2">
@@ -70,6 +70,18 @@ const Cart = () => {
             <div aria-hidden="true" className="relative mb-4 h-60 w-60 text-muted-foreground">
                 <Image src={'/hippo-empty-cart.png'} fill  alt="empty cart hippo"/>
             </div>
+            <div className="text-xl font-semibold">
+              Your cart is empty
+            </div>
+            <SheetTrigger asChild>
+              <Link href={'/products'} className={buttonVariants({
+                variant:'link',
+                size:"sm",
+                className:'text-sm text-muted-foreground'
+              })}>
+                Add items to youe cart to checkout
+              </Link>
+            </SheetTrigger>
           </div>
         )}
       </SheetContent>
